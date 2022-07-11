@@ -18,18 +18,17 @@
 
         </canvas>
         <div class="tools">
-            <button type="button" class="button">undeo</button>
-            <button type="button" class="button">clear</button>
+            <button class="button" onclick="undoCanvas()" type="button">undeo</button>
+            <button class="button" onclick="clearCanvas()" type="button">clear</button>
 
-            <div class="color-filed" style="background-color:red;"> </div>
-            <div class="color-filed" style="background-color:blue;"></div>
-            <div class="color-filed" style="background-color:green;"></div>
-            <div class="color-filed" style="background-color:yellow;"></div>
+            <div class="color-filed red" onclick="changeColor(this)"></div>
+            <div class="color-filed blue" onclick="changeColor(this)"></div>
+            <div class="color-filed green" onclick="changeColor(this)"></div>
+            <div class="color-filed yellow" onclick="changeColor(this)"></div>
 
 
-
-            <input type="color" class="color-picker">
-            <input type="range" min="1" max="100" class="pen-range">
+            <input class="color-picker" oninput="draw_color = this.value" type="color">
+            <input class="pen-range" max="100" min="1" oninput=" drawwidth = this.value" type="range">
         </div>
     </div>
 
